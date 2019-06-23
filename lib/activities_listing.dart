@@ -69,7 +69,7 @@ class ActivtiesListingState extends State<ActivtiesListing> {
           child: ListView(
             children: <Widget>[
               Padding(
-                padding: EdgeInsets.only(top: 60.0, left: 30.0, right: 30.0),
+                padding: EdgeInsets.only(top: 60.0, left: 10.0, right: 15.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
@@ -81,7 +81,36 @@ class ActivtiesListingState extends State<ActivtiesListing> {
                       ),
                     ),
                     SizedBox(height: 20.0),
-                    
+                    Row(
+                      children: <Widget>[
+                        Padding(
+                          padding: EdgeInsets.only(left: 10.0, right: 10.0),
+                          child: Material(
+                            elevation: 0.0,
+                            borderRadius: BorderRadius.circular(25.0),
+                            child: Container(
+                              height: 100.0,
+                              width: 100.0,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(10.0),
+                                image: new DecorationImage(image: AssetImage('assets/travel.png'), fit: BoxFit.cover),
+                              ),
+                            ),
+                          ),
+                        ),
+                        Padding(
+                          padding: EdgeInsets.all(8.0),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                            Text('Item list example', style: new TextStyle(fontSize: 18.0),),
+                            SizedBox(height: 20.0),
+                            Text('Description for item list example.', style: new TextStyle(fontSize: 14.0),),
+                            Text('Lorem ipsum in dolor consectetur.', style: new TextStyle(fontSize: 14.0),)
+                          ],),
+                        )
+                      ],
+                    )
                   ]
                 ),
               ),   
